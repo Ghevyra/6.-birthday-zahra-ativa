@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amara &mdash; Surat Ulang Tahun Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Dancing+Script:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Ambient gold dust layer -->
+<div class="dust-layer" aria-hidden="true"></div>
+
+<main id="stage">
+
+  <!-- ============ SLIDE 0 — ENVELOPE ============ -->
+  <section class="slide envelope-slide" id="slide-0" data-active="true">
+    <div class="envelope-wrap">
+      <p class="envelope-hint">OPEN YAAH !</p>
+      <div class="envelope" id="envelope">
+        <div class="envelope-back"></div>
+        <div class="envelope-photo-peek">
+          <img src="images/slide2-photo.jpg" alt="">
+        </div>
+        <div class="envelope-flap-bottom-shadow"></div>
+        <div class="envelope-flap left"></div>
+        <div class="envelope-flap right"></div>
+        <div class="envelope-flap-top" id="flapTop"></div>
+        <div class="envelope-flap-bottom" id="flapBottom"></div>
+        <button class="wax-seal" id="waxSeal" aria-label="Buka surat">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="46"></circle>
+            <path d="M50 20 C58 26 62 30 62 38 C62 46 56 50 50 50 C44 50 38 46 38 38 C38 30 42 26 50 20 Z" class="seal-petal"/>
+            <path d="M50 50 C58 50 66 54 68 62 C70 70 64 76 56 76 C50 76 46 70 48 64 C50 58 50 54 50 50 Z" class="seal-petal"/>
+            <path d="M50 50 C42 50 34 54 32 62 C30 70 36 76 44 76 C50 76 54 70 52 64 C50 58 50 54 50 50 Z" class="seal-petal"/>
+            <path d="M50 50 C44 44 40 38 44 32 C48 26 56 26 60 32 C64 38 60 44 50 50 Z" class="seal-petal"/>
+            <circle cx="50" cy="50" r="6" class="seal-center"></circle>
+          </svg>
+        </button>
+      </div>
+      <p class="envelope-name">Untuk, Zahra Ativa ❤</p>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 1 — HAPPY BIRTHDAY PORTRAIT ============ -->
+  <section class="slide" id="slide-1">
+    <div class="ornate-frame-wrap reveal-item" data-reveal="1">
+      <div class="ornate-frame">
+        <div class="blink-photo" id="blinkPhoto">
+          <img src="images/slide2-photo.jpg" alt="Foto ulang tahun">
+          </div>
+        </div>
+        <div class="party-hat">🎀</div>
+      </div>
+      <div class="frame-crest">Selamat</div>
+    </div>
+    <h1 class="headline reveal-item" data-reveal="2">Selamat Ulang Tahun</h1>
+    <p class="script-line reveal-item" data-reveal="3">♡ Zahra Ativa ♡</p>
+    <div class="float-deco confetti-a">✦</div>
+    <div class="float-deco confetti-b">✧</div>
+    <div class="float-deco balloon-heart">❀</div>
+    <button class="next-btn" onclick="goNext()">Lanjut →</button>
+  </section>
+
+  <!-- ============ SLIDE 2 — MAKE A WISH (CAKE) ============ -->
+  <section class="slide" id="slide-2">
+    <p class="eyebrow reveal-item" data-reveal="1">Tutup matamu sejenak</p>
+    <h2 class="headline-script reveal-item" data-reveal="2">dan buat sebuah harapan</h2>
+    <div class="cake-wrap reveal-item" data-reveal="3">
+      <div class="cake" id="cakeEl">
+        <div class="cake-candle c1"><span class="flame"></span></div>
+        <div class="cake-candle c2"><span class="flame"></span></div>
+        <div class="cake-candle c3"><span class="flame"></span></div>
+        <div class="cake-layer top"></div>
+        <div class="cake-drip"></div>
+        <div class="cake-layer bottom"></div>
+        <div class="cake-plate"></div>
+      </div>
+    </div>
+    
+    
+    <button class="next-btn" onclick="goNext()">Lanjut →</button>
+  </section>
+
+  <!-- ============ SLIDE 3 — LETTER MESSAGE ============ -->
+  <section id="slide-3" class="slide">
+    <div class="letter-card">
+      <span class="letter-corner tl"></span>
+      <span class="letter-corner tr"></span>
+      <span class="letter-corner bl"></span>
+      <span class="letter-corner br"></span>
+
+      <div class="letter-hearts">
+        <span class="wax-heart">♡</span>
+        <span class="wax-heart">♡</span>
+      </div>
+
+      <div id="letterBody" class="letter-body"></div>
+    </div>
+
+    <button class="next-btn" type="button" onclick="goNext()">Lanjut →</button>
+  </section>
+  <!-- ============ SLIDE 4 — CALENDAR / DATE ============ -->
+  <section class="slide" id="slide-4">
+    <div class="calendar-3d reveal-item" data-reveal="1">
+      <div class="calendar-face">
+        <div class="calendar-header">
+          <span class="cal-month">November</span>
+          <div class="cal-bunting">
+            <i></i><i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+        <div class="calendar-grid">
+          <div class="cal-cell">24<span class="cal-ic"></span></div>
+          <div class="cal-cell">25<span class="cal-ic"></span></div>
+          <div class="cal-cell">26</div>
+          <div class="cal-cell highlight">27<span class="cal-tag">Hari<br>Bahagiamu🎀</span></div>
+          <div class="cal-cell">28<span class="cal-ic"></span></div>
+          <div class="cal-cell">29</div>
+        </div>
+      </div>
+      <div class="calendar-caption">
+        <span class="cal-date"> 27 November </span>
+        <span class="cal-sub"> Selamat Bertambah Usia</span>
+      </div>
+    </div>
+    <button class="next-btn" onclick="goNext()">Lanjut →</button>
+  </section>
+
+  <!-- ============ SLIDE 5 — COLLAGE / BIG PHOTO ============ -->
+  <section class="slide" id="slide-5">
+    <div class="collage-wrap">
+      <div class="collage-hearts-bg" aria-hidden="true"></div>
+      <div class="collage-main reveal-item" data-reveal="1">
+        <img src="images/slide6-main.jpg" alt="Foto utama">
+      </div>
+      <div class="collage-side">
+        <div class="collage-thumb float-1 reveal-item" data-reveal="2"><img src="images/slide6-collage-1.jpg" alt=""></div>
+        <div class="collage-thumb float-2 reveal-item" data-reveal="3"><img src="images/slide6-collage-2.jpg" alt=""></div>
+        <div class="collage-thumb float-3 reveal-item" data-reveal="4"><img src="images/slide6-collage-3.jpg" alt=""></div>
+      </div>
+      <h2 class="collage-title reveal-item" data-reveal="5">Selamat<br>Ulang Tahun</h2>
+    </div>
+    <button class="next-btn" onclick="goNext()">Lanjut →</button>
+  </section>
+
+  <!-- ============ SLIDE 6 — SWEET SEVENTEEN HIGHLIGHT ============ -->
+  <section class="slide" id="slide-6">
+    <div class="song-wrap">
+      <p class="eyebrow reveal-item" data-reveal="1">Chapter Seventeen</p>
+      <h2 class="headline reveal-item" data-reveal="2">Cerita Baru di Usia 17</h2>
+
+      <div class="song-card reveal-item" data-reveal="3">
+        <div class="seventeen-badge" aria-hidden="true">
+          <span class="seventeen-num">17</span>
+          <span class="seventeen-sub">years ♡</span>
+        </div>
+        <div class="song-info-card">
+          <p class="song-caption">Bab Baru · Zahra Ativa</p>
+          <p class="wish-note-quote">
+            “Selamat datang di usia 17! Semoga setiap langkah ke depan dipenuhi hal baik, teman yang tulus, keberanian ngejar mimpi, dan cerita-cerita seru yang selalu bikin tersenyum.”
+          </p>
+          <div class="wish-pills">
+            <span>✦ Sehat &amp; Bahagia</span>
+            <span>✦ Makin Bersinar</span>
+            <span>✦ Sweet Seventeen</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="song-filmstrip reveal-item" data-reveal="4">
+        <div class="film-track">
+          <img src="images/slide7-film-1.jpg" alt="">
+          <img src="images/slide7-film-2.jpg" alt="">
+          <img src="images/slide7-film-3.jpg" alt="">
+          <img src="images/slide7-film-4.jpg" alt="">
+          <img src="images/slide7-film-5.jpg" alt="">
+          <img src="images/slide7-film-1.jpg" alt="">
+          <img src="images/slide7-film-2.jpg" alt="">
+          <img src="images/slide7-film-3.jpg" alt="">
+          <img src="images/slide7-film-4.jpg" alt="">
+          <img src="images/slide7-film-5.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <button class="next-btn" onclick="goNext()">Lanjut →</button>
+  </section>
+  <!-- ============ SLIDE 7 — SCRATCH WISH CARDS ============ -->
+  <section class="slide" id="slide-7">
+    <h2 class="headline reveal-item" data-reveal="1">Harapan Untukmu</h2>
+    <p class="scratch-hint reveal-item" data-reveal="2">gosok setiap kartu untuk membacanya</p>
+    <div class="scratch-grid reveal-item" data-reveal="3" id="scratchGrid">
+      <div class="scratch-card" data-msg="Semoga kamu tetap menjadi dirimu sendiri, tanpa harus berubah demi diterima orang lain"></div>
+      <div class="scratch-card" data-msg="Semoga selalu bahagia, hari ini dan seterusnya"></div>
+      <div class="scratch-card" data-msg="Semoga semua mimpimu pelan-pelan jadi nyata"></div>
+      <div class="scratch-card" data-msg="Semoga selalu dikelilingi orang &amp; hal baik"></div>
+      <div class="scratch-card" data-msg="Semoga kamu selalu punya alasan untuk tersenyum setiap harinya"></div>
+      <div class="scratch-card" data-msg="Kalau suatu hari kamu lelah, semoga kamu selalu menemukan tempat untuk beristirahat"></div>
+    </div>
+    <button class="continue-btn" id="continueBtn">Lanjutkan →</button>
+  </section>
+
+  <!-- ============ SLIDE 8 — I LOVE YOU FINAL ============ -->
+  <section class="slide" id="slide-8">
+    <button class="restart-btn" id="restartBtn" aria-label="Kembali ke awal" title="Kembali ke awal">
+      <svg viewBox="0 0 24 24"><path d="M12 5V2L7 7l5 5V9c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg>
+    </button>
+    <div class="final-panels">
+      <div class="final-panel reveal-item" data-reveal="1">
+        <img src="images/slide9-1.jpg" alt="">
+        <span class="final-word"></span>
+      </div>
+      <div class="final-panel reveal-item" data-reveal="2">
+        <img src="images/slide9-2.jpg" alt="">
+        <span class="final-word"></span>
+      </div>
+      <div class="final-panel reveal-item" data-reveal="3">
+        <img src="images/slide9-3.jpg" alt="">
+        <span class="final-word"></span>
+      </div>
+    </div>
+    <p class="final-sign reveal-item" data-reveal="4">Selamanya kamuu, Zahra Ativa ♡ </p>
+  </section>
+
+</main>
+
+<audio id="bgAudio" src="audio/song.mp3" preload="auto" loop></audio>
+
+<script src="js/script.js"></script>
+</body>
+</html>
